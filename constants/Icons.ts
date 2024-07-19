@@ -1,0 +1,17 @@
+export type IconName =
+  | "phone-portrait"
+  | "bulb"
+  | "heart"
+  | "logo-bitcoin"
+  | "umbrella"
+  | "trending-up"
+  | "wallet"
+  | "key"
+  | "push"
+  | "map"
+  | "filter"
+  | "at"
+  | "search"
+  | "repeat"
+  | "link"
+  | "body";

@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "navigation",
-    "slug": "navigation",
+    "name": "eversend-clone",
+    "slug": "eversend-clone",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
