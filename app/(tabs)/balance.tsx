@@ -11,7 +11,6 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
 import { DrawerLayoutAndroid } from "react-native";
 
-
 const balances = [
   { currency: "UGX", amount: 0 },
   { currency: "EUR", amount: 0 },
@@ -78,10 +77,15 @@ const BalanceScreen: React.FC = () => {
         </View>
 
         <View style={styles.mainBalance}>
-          <Text style={styles.mainBalanceAmount}>
-            {balances[activeBalance].currency} {balances[activeBalance].amount}
-          </Text>
-          <Text style={styles.mainBalanceLabel}>Main balance</Text>
+          <Ionicons name="chevron-back" size={24} color="white" />
+          <View style={styles.mainBalanceText}>
+            <Text style={styles.mainBalanceAmount}>
+              {balances[activeBalance].currency}{" "}
+              {balances[activeBalance].amount}
+            </Text>
+            <Text style={styles.mainBalanceLabel}>Main balance</Text>
+          </View>
+
           <Ionicons name="chevron-forward" size={24} color="white" />
         </View>
 
@@ -112,7 +116,7 @@ const styles = StyleSheet.create({
   },
   header: {
     flexDirection: "row",
-    justifyContent: "space-between",
+    justifyContent: "space-around",
     alignItems: "center",
     padding: 16,
   },
@@ -133,11 +137,17 @@ const styles = StyleSheet.create({
   mainBalance: {
     alignItems: "center",
     marginTop: 32,
+    padding: 16,
+    flexDirection: "row",
+    justifyContent: "space-between",
   },
   mainBalanceAmount: {
     fontSize: 48,
     color: "white",
     fontWeight: "bold",
+  },
+  mainBalanceText: {
+    alignItems: "center",
   },
   mainBalanceLabel: {
     fontSize: 16,

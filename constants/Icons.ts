@@ -14,4 +14,5 @@ export type IconName =
   | "search"
   | "repeat"
   | "link"
-  | "body";
+  | "body"
+  | "people";

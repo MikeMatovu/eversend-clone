@@ -5,6 +5,7 @@ import { Ionicons } from "@expo/vector-icons";
 import SendProviders from "@/constants/SendProviders";
 import {IconName} from "@/constants/Icons";
 import { SearchBar } from "react-native-screens";
+import ContactList from "@/components/SendContact";
 
 const Index = () => {
   return (
@@ -25,7 +26,7 @@ const Index = () => {
         </View>
         <ScrollView horizontal>
           {SendProviders.map((provider) => (
-            <TouchableOpacity style={styles.customButton}>
+            <TouchableOpacity key={provider.text} style={styles.customButton}>
               <Ionicons
                 name={provider.iconName as IconName}
                 size={24}
@@ -36,6 +37,7 @@ const Index = () => {
           ))}
         </ScrollView>
       </View>
+      <ContactList />
     </SafeAreaView>
   );
 };
@@ -65,7 +67,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignContent: "center",
-    marginHorizontal: 16,
+    marginHorizontal: 8,
   },
   buttonText: {
     color: "white",

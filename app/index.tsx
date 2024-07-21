@@ -32,7 +32,7 @@ const Home = () => {
 
         <TouchableOpacity
           style={styles.customButton}
-          onPress={() => router.push("/send")}
+          onPress={() => router.push("/balance")}
         >
           <Text style={styles.buttonText}>To tabs</Text>
         </TouchableOpacity>
